@@ -2,7 +2,7 @@ import config from '../../configJson'
 
 const filterByName = (data, value) => {
   return data?.results?.filter(person => {
-    const firstLetter = person?.name?.last?.charAt(0)
+    const firstLetter = person?.name?.first?.charAt(0)
     return value.toLowerCase() === firstLetter.toLowerCase()
   })
 }

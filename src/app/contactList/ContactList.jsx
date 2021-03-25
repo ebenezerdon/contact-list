@@ -14,9 +14,13 @@ const ContactList = () => {
       <Tabs data={data} setContactData={setContactData}/>
       {isLoading && <div>Loading...</div>}
       {error && <div>Error fetching data...</div>}
-      {contactData?.map(contact => (
-        <div>{contact.name.last}</div>
-      ))}
+      <div className="contactList__content">
+        {contactData?.map(contact => (
+          <div tabIndex={2} className="contactList__content__name">
+            {contact.name.last}, {contact.name.first.toUpperCase()}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

@@ -29,4 +29,18 @@
       }
     }
   }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+    margin: 4em;
+
+    &__name {
+      width: 90%;
+      margin-bottom: 1em;
+      border-bottom: 2px solid #c4c4c4;
+      padding-bottom: .7em;
+    }
+  }
 }
