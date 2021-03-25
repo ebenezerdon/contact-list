@@ -1,2 +1,32 @@
 .contactList {
+  &__tab {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+
+    &__keys {
+      background: #dddddd;
+      border: unset;
+      border-top: 3px solid #bfbfbf;
+      border-right: 2px solid #bfbfbf;
+      border-radius: 0.9em 0.9em 0 0.9em;
+      cursor: pointer;
+      height: 2.7em;
+
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 1px 2px #666666;
+        z-index: 1;
+      }
+
+      &__text {
+        font-size: 1.5em;
+        margin: auto;
+
+        sub {
+          margin-left: 0.4em;
+          font-size: 0.5em;
+        }
+      }
+    }
+  }
 }
