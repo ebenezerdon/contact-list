@@ -16,9 +16,9 @@ const ContactList = () => {
       {error && <div>Error fetching data...</div>}
       <div className="contactList__content">
         {contactData?.map(contact => (
-          <div tabIndex={2} className="contactList__content__name">
+          <button className="contactList__content__name">
             {contact.name.last}, {contact.name.first.toUpperCase()}
-          </div>
+          </button>
         ))}
       </div>
     </div>
