@@ -26,11 +26,14 @@ const ContactList = () => {
 
   return (
     <div className="contactList" onClick={event => closeContactCard(event)}>
-      <Tabs
-        data={data}
-        setContactData={setContactData}
-        setCardIsOpen={setCardIsOpen}
-      />
+      <h3 className="contactList__title">Contact List</h3>
+      {data && (
+        <Tabs
+          data={data}
+          setContactData={setContactData}
+          setCardIsOpen={setCardIsOpen}
+        />
+      )}
       {isLoading && <img className="contactList__loader" alt="loader" src={elipsisLoader} />}
       {error && <div>Error fetching data...</div>}
       {cardIsOpen && (

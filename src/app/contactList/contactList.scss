@@ -2,6 +2,12 @@
   width: 100vw;
   height: 100vh;
 
+  &__title {
+    font-family: Arial, helvetica, serif;
+    color: #303030;
+    text-align: center;
+  }
+
   &__tab {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));

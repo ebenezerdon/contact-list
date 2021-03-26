@@ -9,7 +9,7 @@ const filterByName = (data, value) => {
 }
 
 const Tabs = ({data, setContactData, setCardIsOpen}) => {
-  const [activeTab, setActiveTab] = useState('')
+  const [activeTab, setActiveTab] = useState('a')
 
   useEffect(() => {
     setContactData(filterByName(data, 'a'))
