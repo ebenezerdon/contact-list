@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useEffect, useState } from 'react'
 import config from '../../configJson'
 
 const filterByName = (data, value) => {
@@ -10,6 +10,10 @@ const filterByName = (data, value) => {
 
 const Tabs = ({data, setContactData, setCardIsOpen}) => {
   const [activeTab, setActiveTab] = useState('')
+
+  useEffect(() => {
+    setContactData(filterByName(data, 'a'))
+  }, [setContactData, data])
 
   const tabKeys = config.tabs.map(value => {
     const filteredData = filterByName(data, value)
