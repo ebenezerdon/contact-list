@@ -23,7 +23,7 @@
 
       &-active {
         background: rgb(255,255,255);
-        background: linear-gradient(0deg, #dddddd 0%, #d4d4d4 30%, #989898 100%);
+        background: linear-gradient(0deg, #dddddd 0%, #dddddd 60%, #b0b0b0 100%);
       }
 
       &__text {
@@ -36,6 +36,13 @@
         }
       }
     }
+  }
+
+  &__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__content {

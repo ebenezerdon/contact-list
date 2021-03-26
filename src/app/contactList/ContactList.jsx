@@ -3,6 +3,7 @@ import useFetch from 'react-fetch-hook'
 import config from '../../configJson'
 import Tabs from './Tabs'
 import { ContactCard } from '../contactCard'
+import { elipsisLoader } from '../../assets'
 import './contactList.scss'
 
 const ContactList = () => {
@@ -30,7 +31,7 @@ const ContactList = () => {
         setContactData={setContactData}
         setCardIsOpen={setCardIsOpen}
       />
-      {isLoading && <div>Loading...</div>}
+      {isLoading && <img className="contactList__loader" alt="loader" src={elipsisLoader} />}
       {error && <div>Error fetching data...</div>}
       {cardIsOpen && (
         <ContactCard
