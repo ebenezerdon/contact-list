@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './contactCard.scss'
 
-const ContactCard = ({ mousePosition, contact }) => {
+const ContactCard = ({ mousePosition, contact, setCardIsOpen }) => {
   useEffect(() => {
     const contactCard = document.querySelector('.contactCard')
     contactCard.style.left = (mousePosition[0] / 2) + 'px'
@@ -23,6 +23,11 @@ const ContactCard = ({ mousePosition, contact }) => {
           <p><strong>state</strong> {contact?.location?.state}</p>
           <p><strong>postcode</strong> {contact?.location?.postcode}</p>
         </div>
+      </div>
+      <div>
+        <button className="contactCard__closeButton" onClick={() => setCardIsOpen(false)}>
+          x
+        </button>
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import config from '../../configJson'
 
 const filterByName = (data, value) => {
@@ -8,11 +9,15 @@ const filterByName = (data, value) => {
 }
 
 const Tabs = ({data, setContactData, setCardIsOpen}) => {
+  const [activeTab, setActiveTab] = useState('')
+
   const tabKeys = config.tabs.map(value => {
     const filteredData = filterByName(data, value)
     return (
-      <button className="contactList__tab__keys"
+      <button
+        className={`contactList__tab__keys ${activeTab === value && "contactList__tab__keys-active"}`}
         onClick={() => {
+          setActiveTab(value)
           setContactData(filteredData)
           setCardIsOpen(false)
         }}

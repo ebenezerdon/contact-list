@@ -12,7 +12,6 @@ const ContactList = () => {
   const [cardIsOpen, setCardIsOpen] = useState(false)
   const [mousePosition, setMousePosition] = useState([])
   const [currentContactData, setCurrentContactData] = useState({})
-  data && console.log(data.results)
 
   const handleListButtonClick = (event, contact) => {
     setMousePosition([event.clientX, event.clientY])
@@ -26,13 +25,18 @@ const ContactList = () => {
 
   return (
     <div className="contactList" onClick={event => closeContactCard(event)}>
-      <Tabs data={data} setContactData={setContactData} setCardIsOpen={setCardIsOpen}/>
+      <Tabs
+        data={data}
+        setContactData={setContactData}
+        setCardIsOpen={setCardIsOpen}
+      />
       {isLoading && <div>Loading...</div>}
       {error && <div>Error fetching data...</div>}
       {cardIsOpen && (
         <ContactCard
           mousePosition={mousePosition}
           contact={currentContactData}
+          setCardIsOpen={setCardIsOpen}
         />
       )}
       <div className="contactList__content">
