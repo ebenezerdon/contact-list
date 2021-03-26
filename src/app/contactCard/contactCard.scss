@@ -1,7 +1,7 @@
 $breakpoint-tablet: 768px;
 
 .contactCard {
-  position: absolute;
+  position: fixed;
   display: grid;
   grid-template-columns: 1fr 2fr 0.1fr;
   max-width: 95vw;
