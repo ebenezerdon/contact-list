@@ -7,12 +7,15 @@ const filterByName = (data, value) => {
   })
 }
 
-const Tabs = ({data, setContactData}) => {
+const Tabs = ({data, setContactData, setCardIsOpen}) => {
   const tabKeys = config.tabs.map(value => {
     const filteredData = filterByName(data, value)
     return (
       <button className="contactList__tab__keys"
-        onClick={() => setContactData(filteredData)}
+        onClick={() => {
+          setContactData(filteredData)
+          setCardIsOpen(false)
+        }}
         key={value}
       >
         <p className="contactList__tab__keys__text">

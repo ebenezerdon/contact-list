@@ -11,7 +11,7 @@ const ContactCard = ({ mousePosition, contact }) => {
   return (
     <div className="contactCard">
       <div className="contactCard__photo">
-        <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="contact" />
+        <img src={contact?.picture?.large} alt="contact" />
       </div>
       <div>
         <p className="contactCard__name">{contact?.name?.first.toUpperCase()}, {contact?.name?.last}</p>

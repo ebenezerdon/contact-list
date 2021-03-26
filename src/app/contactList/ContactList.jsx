@@ -26,7 +26,7 @@ const ContactList = () => {
 
   return (
     <div className="contactList" onClick={event => closeContactCard(event)}>
-      <Tabs data={data} setContactData={setContactData}/>
+      <Tabs data={data} setContactData={setContactData} setCardIsOpen={setCardIsOpen}/>
       {isLoading && <div>Loading...</div>}
       {error && <div>Error fetching data...</div>}
       {cardIsOpen && (
