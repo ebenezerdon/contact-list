@@ -4,8 +4,10 @@ import './contactCard.scss'
 const ContactCard = ({ mousePosition, contact, setCardIsOpen }) => {
   useEffect(() => {
     const contactCard = document.querySelector('.contactCard')
-    contactCard.style.left = (mousePosition[0] / 2) + 'px'
-    contactCard.style.top = (mousePosition[1] / 2) + 'px'
+    if (window.innerWidth > 768) {
+      contactCard.style.left = (mousePosition[0] / 2) + 'px'
+      contactCard.style.top = (mousePosition[1] / 2) + 'px'
+    }
   }, [mousePosition])
 
   return (

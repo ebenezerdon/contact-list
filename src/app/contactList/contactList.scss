@@ -1,5 +1,6 @@
+$breakpoint-tablet: 768px;
+
 .contactList {
-  width: 100vw;
   height: 100vh;
 
   &__title {
@@ -14,12 +15,18 @@
 
     &__keys {
       background: #dddddd;
-      border: unset;
-      border-top: 3px solid #cdcdcd;
-      border-right: 2px solid #bfbfbf;
-      border-radius: 0.9em 0.9em 0 0.9em;
       cursor: pointer;
       height: 2.7em;
+      border: unset;
+      border: 3px solid #cdcdcd;
+
+      @media (min-width: $breakpoint-tablet) {
+        border: unset;
+        grid-template-columns: 1fr 1fr;
+        border-top: 3px solid #cdcdcd;
+        border-right: 2px solid #bfbfbf;
+        border-radius: 0.9em 0.9em 0 0.9em;
+      }
 
       &:focus {
         outline: 0;
@@ -53,8 +60,12 @@
 
   &__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     margin: 4em;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     &__name {
       width: 90%;
