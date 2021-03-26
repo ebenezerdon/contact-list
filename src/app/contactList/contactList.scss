@@ -1,7 +1,7 @@
 .contactList {
   &__tab {
     display: grid;
-    grid-template-columns: repeat(26, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
 
     &__keys {
       background: #dddddd;
