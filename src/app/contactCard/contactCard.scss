@@ -1,0 +1,40 @@
+.contactCard {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.1fr;
+  width: 35em;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow:
+    20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+
+  &__photo {
+    background: brown;
+    margin-top: 1em;
+    margin-left: 1.3em;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__details {
+    margin-right: 10em;
+    width: 100%;
+
+    p {
+      font-size: .9em;
+
+      strong {
+        margin-right: 1.2em;
+      }
+    }
+  }
+}

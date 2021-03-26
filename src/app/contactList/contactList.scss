@@ -1,4 +1,7 @@
 .contactList {
+  width: 100vw;
+  height: 100vh;
+
   &__tab {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
