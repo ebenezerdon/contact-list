@@ -13,6 +13,7 @@ const Tabs = ({data, setContactData}) => {
     return (
       <button className="contactList__tab__keys"
         onClick={() => setContactData(filteredData)}
+        key={value}
       >
         <p className="contactList__tab__keys__text">
           {value}<sub>{filteredData?.length}</sub>

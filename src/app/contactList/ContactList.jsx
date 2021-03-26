@@ -8,6 +8,7 @@ const ContactList = () => {
   const url = `${config.userUrl}/?results=${config.numberCards}`
   const { isLoading, data, error } = useFetch(url)
   const [contactData, setContactData] = useState(null)
+  data && console.log(data.results)
 
   return (
     <div className="contactList">
@@ -15,8 +16,8 @@ const ContactList = () => {
       {isLoading && <div>Loading...</div>}
       {error && <div>Error fetching data...</div>}
       <div className="contactList__content">
-        {contactData?.map(contact => (
-          <button className="contactList__content__name">
+        {contactData?.map((contact, index) => (
+          <button key={index} className="contactList__content__name">
             {contact.name.last}, {contact.name.first.toUpperCase()}
           </button>
         ))}
